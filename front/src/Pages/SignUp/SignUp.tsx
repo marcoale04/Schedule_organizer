@@ -26,7 +26,7 @@ export const SignUp = () => {
                     </div>
                 </div>
                 <div className="container">
-                    <div style={{margin: "20px;"}}>
+                    <div style={{margin: "20px"}}>
 
                     </div>
                     <div className="form-container">
@@ -68,7 +68,7 @@ export const SignUp = () => {
                                 Si ya tienes una cienta, ingresa aquí
                             </p>
                         </div>
-                        <div style={{margin: "10px;"}}>
+                        <div style={{margin: "10px"}}>
 
                         </div>
                         <div className="bts-form-container">

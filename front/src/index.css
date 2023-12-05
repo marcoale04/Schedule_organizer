@@ -3,6 +3,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Montserrat-regular, 'sans-serif';
   box-sizing: border-box;
+}
+
+:root{
+  --radius: 5px;
+  --white: #F2F2F8;
+  --black: #313132;
 }

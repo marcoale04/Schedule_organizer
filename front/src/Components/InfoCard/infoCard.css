@@ -1,0 +1,29 @@
+.info-card-container{
+    display: grid;
+    grid-template-rows: 60% 25% 1fr;
+    background: var(--white);
+    width: 90%;
+    height: 150px;
+    border-radius: var(--radius);
+    padding: 5px;
+}
+.schedule-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: var(--radius);
+
+}
+.schedule-container p{
+    color: var(--black);
+}
+.schedule {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
