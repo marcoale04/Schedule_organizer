@@ -11,3 +11,7 @@ body {
   --white: #F2F2F8;
   --black: #313132;
 }
+p{
+  margin: 0;
+  padding: 0;
+}

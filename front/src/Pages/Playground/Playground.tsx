@@ -1,3 +1,4 @@
+import { Carousel } from "../../Components/Carousel/Carousel"
 import { InfoCard } from "../../Components/InfoCard/InfoCard"
 
 export const Playground = () => {
@@ -13,21 +14,8 @@ export const Playground = () => {
                 justifyContent:"center",
                 alignItems:"center"
             }}>
-                <div style={{
-                    display:"flex",
-                    width: "500px",
-                    height: "500px",
-                    justifyContent:"center",
-                    alignItems:"center",
-                    flexDirection: "column",
-                    gap:"10px",
-                    overflow: "scroll",
-                    background: "linear-gradient(90deg, #E387F5, #FF8ABE",
-                    borderRadius: "var(--radius)"
-                }}>
-                    <InfoCard schedules={schedules}  />
-
-                </div>
+                <Carousel children={[<InfoCard schedules={schedules}  />, <InfoCard schedules={schedules}  />, <InfoCard schedules={schedules}  />]}/>
+                
 
             </div>
         </>
