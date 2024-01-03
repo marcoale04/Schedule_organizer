@@ -1,5 +1,6 @@
 import { Carousel } from "../../Components/Carousel/Carousel"
 import { InfoCard } from "../../Components/InfoCard/InfoCard"
+import { MainCard } from "../../Components/MainCard/MainCard"
 
 export const Playground = () => {
 
@@ -14,7 +15,37 @@ export const Playground = () => {
                 justifyContent:"center",
                 alignItems:"center"
             }}>
-                <Carousel children={[<InfoCard schedules={schedules}  />, <InfoCard schedules={schedules}  />, <InfoCard schedules={schedules}  />]}/>
+                <Carousel children={[
+                    <MainCard 
+                        children={[
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />
+                        ]}
+                    />,
+                    <MainCard 
+                    children={[
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />
+                        ]}
+                    />,
+                    <MainCard 
+                        children={[
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />
+                        ]}
+                    />,
+                    <MainCard 
+                        children={[
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />, 
+                            <InfoCard schedules={schedules}  />
+                        ]}
+                    />
+                ]}/>
+                
                 
 
             </div>

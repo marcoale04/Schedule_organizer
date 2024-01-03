@@ -1,0 +1,13 @@
+.main-card-wrapper{
+    display:flex;
+    width: 500px;
+    height: 500px;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:10px;
+    overflow: scroll;
+    background: linear-gradient(90deg, #E387F5, #FF8ABE);
+    border-radius: var(--radius);
+    padding: 10px
+}
