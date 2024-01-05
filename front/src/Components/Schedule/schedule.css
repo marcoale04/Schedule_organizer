@@ -1,0 +1,13 @@
+.schedule-container{
+
+    width: 600px;
+    height: 500px;
+    grid-template-columns: repeat(6, 1fr);
+    background: red;
+    position: relative;
+    display: grid;
+    margin: 0;
+    gap: 1px;
+    padding: 2px 0px 2px 0px;
+    border-radius: 5px;
+}

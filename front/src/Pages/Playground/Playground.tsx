@@ -1,6 +1,7 @@
 import { Carousel } from "../../Components/Carousel/Carousel"
 import { InfoCard } from "../../Components/InfoCard/InfoCard"
 import { MainCard } from "../../Components/MainCard/MainCard"
+import { Schedule } from "../../Components/Schedule/Schedule"
 
 export const Playground = () => {
 
@@ -15,7 +16,7 @@ export const Playground = () => {
                 justifyContent:"center",
                 alignItems:"center"
             }}>
-                <Carousel children={[
+                {/* <Carousel children={[
                     <MainCard 
                         children={[
                             <InfoCard schedules={schedules}  />, 
@@ -44,7 +45,8 @@ export const Playground = () => {
                             <InfoCard schedules={schedules}  />
                         ]}
                     />
-                ]}/>
+                ]}/> */}
+                <Schedule days={[""]} hours={[""]}/>
                 
                 
 

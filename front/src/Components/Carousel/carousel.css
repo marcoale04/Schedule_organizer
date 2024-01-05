@@ -7,3 +7,13 @@
     align-items: center;
     overflow: scroll;
 }
+
+.perritos{
+    animation: ratones 1s linear forwards;
+}
+
+@keyframes ratones {
+    to{
+        transform: translateX(500px);
+    }
+}
