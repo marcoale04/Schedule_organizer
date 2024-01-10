@@ -13,13 +13,16 @@ export const Schedule = (props: Props) => {
     return(
         <>
             <div className="schedule-container">
-                <div style={{background: "aqua", width: "100%"}}>
+                <div className="days-container">
+                    <div style={{background: "aqua", width: "100%"}}>
+                        perritos
+                    </div>
+                    <div style={{background: "green", width: "100%"}}>
+                        GATITOPS
+                    </div>
 
                 </div>
-                <div style={{background: "green", width: "100%"}}>
-
-                </div>
-                <div style={{background: "purple", width: "100%"}}>
+                {/* <div style={{background: "purple", width: "100%"}}>
 
                 </div>
                 <div style={{background: "yellow", width: "100%"}}>
@@ -48,7 +51,7 @@ export const Schedule = (props: Props) => {
                 </div>
                 <div style={{background: "black", width: "100%"}}>
 
-                </div>
+                </div> */}
                 
 
 
