@@ -7,7 +7,7 @@
     flex-direction: column;
     gap:10px;
     overflow: scroll;
-    background: linear-gradient(90deg, #E387F5, #FF8ABE);
+    background: var(--main-card-background);
     border-radius: var(--radius);
     
 }
