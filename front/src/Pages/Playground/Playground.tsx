@@ -6,6 +6,7 @@ import { Schedule } from "../../Components/Schedule/Schedule"
 import Button from 'react-bootstrap/Button';
 import { Carousel } from "../../Components/Carousel/Carousel";
 import { RedirectCard } from "../../Components/RedirectCard/RedirectCard";
+import { TitleBar } from "../../Components/TitleBar/TitleBar";
 
 export const Playground = () => {
 
@@ -32,7 +33,10 @@ export const Playground = () => {
                 
                 
                 {/* <Carousel /> */}
-                <RedirectCard icon="calendar" background="var( --gradient-pinks)" label="Suaves y redondos" />
+                {/* <RedirectCard icon="calendar" background="var( --gradient-pinks)" label="Suaves y redondos" /> */}
+                <TitleBar title="Perritos redondos y suaves "  color="aqua"/>
+                {/* <TitleBar title="Perritos redondos y suaves "  color="var(--gradient-purples)"/> */}
+
 
 
             
