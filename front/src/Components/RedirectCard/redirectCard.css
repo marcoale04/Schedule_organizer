@@ -1,0 +1,32 @@
+.redirect-card-wrapper{
+    width: 500px;
+    height: 450px;
+    background: var(--background-redirect-card);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redirect-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    width: 50%;
+    height: 50%;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.redirect-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background: var(--black);
+    color: var(--white);
+    height: 50px;
+    border-radius: var(--radius);
+}

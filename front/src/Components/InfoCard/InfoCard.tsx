@@ -2,7 +2,9 @@ import "./infoCard.css"
 
 interface Props {
     color?: string,
-    schedules: Array<string>
+    schedules: Array<string>,
+    profesor: string,
+    disp: number
 }
 export const InfoCard = (props: Props) => {
     return(
@@ -17,9 +19,9 @@ export const InfoCard = (props: Props) => {
                 >
                     {props.schedules.map((item, index) => {
                         return(
-                            <div key={index} className="schedule">
-                                <p>{item}</p>
-                            </div>
+                            
+                                <p key={index}>{item}</p>
+                            
                         )
                     })}
                 </div>
@@ -30,20 +32,23 @@ export const InfoCard = (props: Props) => {
                     className="teacher-info-container"
                 >
                     <p>
-                        Perritos
+                        Profesor(a)
                     </p>
                     <p>
-                        Perritos
+                        {props.profesor}
                     </p>
                 </div>
                 <div
                     style={{ 
                         background: `${props.color ? props.color : "linear-gradient(90deg, #E387F5, #FF8ABE"}`
                     }}
-                    className="teacher-info-container"
+                    className="disp-info-container"
                 >
                     <p>
-                        Perritos
+                        Espacios disponibles
+                    </p>
+                    <p className="disp">
+                        {props.disp}
                     </p>
               
                 </div>

@@ -6,11 +6,19 @@ body {
   box-sizing: border-box;
 }
 
+body p{
+  margin: 0;
+  padding: 0;
+  /* color:  #FF8ABE; */
+}
+
 :root{
   --radius: 5px;
   --white: #F2F2F8;
   --black: #313132;
+  --gradient-pinks: linear-gradient(90deg, #E387F5, #FF8ABE);
 }
+
 p{
   margin: 0;
   padding: 0;

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Login } from './Pages/Login/Login.tsx';
 import { SignUp } from './Pages/SignUp/SignUp.tsx';
 import { Playground } from './Pages/Playground/Playground.tsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const root = ReactDOM.createRoot(

@@ -11,10 +11,11 @@ export const MainCard = (props: Props) => {
              <div className="main-card-wrapper">
                 {props.children?.map((item, index) => {
                     return(
-                        item
+                     
+                            item
+                     
                     )
                 })}
-                {/* <InfoCard schedules={schedules}  /> */}
 
          
 
