@@ -18,6 +18,7 @@ body p{
   --black: #313132;
   --gradient-pinks: linear-gradient(90deg, #E387F5, #FF8ABE);
   --gradient-purples: linear-gradient(90deg, #7B2EFF, #8994FA);
+  --p: 1rem;
 }
 
 p{

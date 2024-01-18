@@ -8,6 +8,7 @@ import { Carousel } from "../../Components/Carousel/Carousel";
 import { RedirectCard } from "../../Components/RedirectCard/RedirectCard";
 import { TitleBar } from "../../Components/TitleBar/TitleBar";
 import { StudentsContainer } from "../../Components/StudentsContainer/StudentsContainer";
+import { PopUp } from "../../Components/Popup/Popup";
 
 export const Playground = () => {
 
@@ -23,6 +24,10 @@ export const Playground = () => {
     let disp = 2;
 
     const [info, setInfo] = useState([""]) ;
+
+    const [popup, setPopup] = useState(false)
+
+    
     return(
         <>
             <div style={{
@@ -35,25 +40,41 @@ export const Playground = () => {
             }}>
                 
                 
-                {/* <Carousel /> */}
-                {/* <RedirectCard icon="calendar" background="var( --gradient-pinks)" label="Suaves y redondos" /> */}
-                <TitleBar title="Perritos redondos y suaves "  color="aqua"/>
+                <PopUp
+                    showPopup={popup}
+                    onClose={() => {
+                        setPopup(false)
+                    }}
 
-                <MainCard 
-                    children={[
-                        <StudentsContainer students={students} color="var(--gradient-purples)" />
-                    ]}
-                    color="var(--gradient-purples)"
-                />
-                {/* <TitleBar title="Perritos redondos y suaves "  color="var(--gradient-purples)"/> */}
+                    titleSlot={
+                        <div className="title">
+                            <p>¡Prueba!</p>
+                        </div>
+                    }
+
+                    contentSlot={
+                        <div className="default_box">
+                            <p>Este es un popup de prueba</p>
+                            <button onClick={() => {
+
+                                    setPopup(false)
+                                }}
+                            >
+                                Aceptar
+                            </button>
+                        </div>
+                    }
+                >
+                </PopUp>
+
+                <button onClick={() => {
+                    setPopup(true)
+                }}>Popup</button>
 
 
 
             
         
-
-                
-                {/* <Button /> */}
                                     
 
             </div>
