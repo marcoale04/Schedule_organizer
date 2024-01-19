@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center; */
     background: var(--white);
-    height: calc(100vh - 140px);
+    height: calc(100vh + var(--footer-size));
 }
 .home-cards-container{
     display: flex;

@@ -10,6 +10,7 @@ body{
     align-items: center;
     margin-bottom: 15px;
     background: #F2F2F8;
+    height: calc(100vh + var(--footer-size))
     /* height: calc(100vh - 120px); */
     
 }

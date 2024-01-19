@@ -1,7 +1,19 @@
+:global(body) {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+:global(body::after) {
+    content: "";
+    display: block;
+    height: var(--footer-size); /* Set same as footer's height for example 50px if the footer size is 50px */
+}
+
 footer{
-    height: 80px;
+    /* height: 80px; */
     background: var(--black) ;
     width: 100%;
+    
 }
 
 .footer-main-container{

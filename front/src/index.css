@@ -4,14 +4,21 @@ body {
   flex-direction: column;
   min-height: 100vh;
   box-sizing: border-box;
+  font-family: Belgrano;
+
 }
 
 body p{
   margin: 0;
   padding: 0;
-  font-family: 'Belgrano' sans-serif;
-  
-  /* color:  #FF8ABE; */
+  font-family: Belgrano;
+
+
+}
+
+@font-face{
+  font-family: Belgrano;
+  src: url('assets/Belgrano/Belgrano-Regular.ttf');
 }
 
 :root{

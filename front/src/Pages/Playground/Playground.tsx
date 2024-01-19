@@ -12,6 +12,7 @@ import { PopUp } from "../../Components/Popup/Popup";
 import { Selector } from "../../Components/Selector/Selector";
 import { CourseCard } from "../../Components/CourseCard/CourseCard";
 
+import "./playground.css"
 export const Playground = () => {
 
     let hours = ["7:00 - 9:00", "9:00 - 11:00",  "11:00 - 13:00", "13:00 - 15:00"]
@@ -73,7 +74,11 @@ export const Playground = () => {
                     setPopup(true)
                 }}>Popup</button> */}
 
-                <Carousel role="student" color="var(--gradient-purples)" />
+                {/* <Carousel role="student" color="var(--gradient-purples)" /> */}
+
+                <p className="hora">horario</p>
+
+                <i className="fa-regular fa-circle-down"></i>
                 {/* <CourseCard teacher="Melissa Robles"/> */}
                 
 
