@@ -15,7 +15,7 @@ body p{
 }
 
 :root{
-  --radius: 5px;
+  --radius: 10px;
   --white: #F2F2F8;
   --black: #313132;
   --gradient-pinks: linear-gradient(90deg, #E387F5, #FF8ABE);
