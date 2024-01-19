@@ -9,6 +9,7 @@ import { RedirectCard } from "../../Components/RedirectCard/RedirectCard";
 import { TitleBar } from "../../Components/TitleBar/TitleBar";
 import { StudentsContainer } from "../../Components/StudentsContainer/StudentsContainer";
 import { PopUp } from "../../Components/Popup/Popup";
+import { Selector } from "../../Components/Selector/Selector";
 
 export const Playground = () => {
 
@@ -39,7 +40,7 @@ export const Playground = () => {
                 alignItems:"center"
             }}>
                 
-                
+{/*                 
                 <PopUp
                     showPopup={popup}
                     onClose={() => {
@@ -69,7 +70,9 @@ export const Playground = () => {
 
                 <button onClick={() => {
                     setPopup(true)
-                }}>Popup</button>
+                }}>Popup</button> */}
+
+                <Selector label="Perritos" options={["Chihuahua", "Labrador", "pug", "Boxer", "Pastor", "Labrador", "pug", "Boxer", "Pastor"]} />
 
 
 
