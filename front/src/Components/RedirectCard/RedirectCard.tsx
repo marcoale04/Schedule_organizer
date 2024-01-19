@@ -8,7 +8,8 @@ import addressBook from "../../assets/address-book.svg"
 interface Props {
     icon: "calendar" | "schedule" | "diary" | "generate",
     background: string,
-    label: string
+    label: string,
+    onClick: () => void
 
 }
 
@@ -41,9 +42,14 @@ export const RedirectCard = (props: Props) => {
 
     return(
         <>
-            <div className="redirect-card-wrapper">
+            <div 
+                className="redirect-card-wrapper"
+                onClick={() => {
+                    props.onClick()
+                }}
+            >
                 <div className="redirect-icon">
-                    <img src={icon} alt="a" height={"170px"} width={"170px"} />
+                    <img src={icon} alt="a" height={"120px"} width={"120px"} />
                 </div>
                 <div className="redirect-description">
                     <p>{props.label}</p>

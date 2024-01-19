@@ -10,8 +10,8 @@ export const TitleBar = (props: Props) => {
     body.style.setProperty("--background-title-var", props.color);
     return(
         <>
-            <div className="title-container">
-                <div className="title">
+            <div className="title-bar-container">
+                <div className="title-bar">
                     <p>
                         {props.title}
                     </p>

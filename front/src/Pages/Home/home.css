@@ -1,0 +1,17 @@
+.home-main-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background: var(--white);
+    height: calc(100vh - 120px);
+}
+.home-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+}

@@ -6,6 +6,7 @@ import { Login } from './Pages/Login/Login.tsx';
 import { SignUp } from './Pages/SignUp/SignUp.tsx';
 import { Playground } from './Pages/Playground/Playground.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Home } from './Pages/Home/Home.tsx';
 
 
 const root = ReactDOM.createRoot(
@@ -24,6 +25,18 @@ const router = createBrowserRouter([
 	{
 		path: "/playground",
 		element: <Playground />
+	},
+	{
+		path: "student",
+		element: <Home role='student'/>
+	},
+	{
+		path: "teacher",
+		element: <Home role='teacher' />
+	},
+	{
+		path: "manager",
+		element: <Home role="manager" />
 	}
 ])
 

@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import "./signUp.css"
+import { Header } from "../../Components/Header/Header";
+import { Footer } from "../../Components/Footer/Footer";
 
 export const SignUp = () => {
 
@@ -7,12 +9,7 @@ export const SignUp = () => {
     return(
         <>
         
-            <header>
-                <div className="header-content">
-                
-                
-                </div>
-            </header>
+            <Header />
 
             <div className="main-container">
                 <div className="title-container">
@@ -90,9 +87,7 @@ export const SignUp = () => {
                     
                 </div>
             </div>
-            <footer>
-                
-            </footer>
+            <Footer />
         </>
     )
 }

@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import "./login.css"
 import { TitleBar } from "../../Components/TitleBar/TitleBar";
+import { Header } from "../../Components/Header/Header";
+import { Footer } from "../../Components/Footer/Footer";
 
 export const Login = () => {
 
@@ -8,20 +10,7 @@ export const Login = () => {
     return(
         <>
         
-            <header>
-                <div className="header-content">
-                    <div className="name-container">
-                        <p>Marco Alejandro</p>
-                    </div>
-                    <div className="bts-header-container">
-                        <p>Regístrate</p>
-                        <p>Registro horario</p>
-                        <p>Consulta horario</p>
-
-                    </div>
-                    
-                </div>
-            </header>
+            <Header />
 
             <div className="main-container">
                 <TitleBar title="Este es un titulo de prueba" color="var(--gradient-purples)"/>
@@ -78,9 +67,8 @@ export const Login = () => {
                     
                 </div>
             </div>
-            <footer>
-                
-            </footer>
+            <Footer />
+    
         </>
     )
 }
