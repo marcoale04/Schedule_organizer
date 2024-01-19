@@ -13,6 +13,8 @@ export const Selector = (props:  Props) => {
 
     const [showOptions, setShowOptions] = useState(false);
 
+    const [selected, setSelected] = useState("");
+
 
     let body = window.document.body;
     body.style.setProperty("--selector-radius", showOptions ? "10px 10px 0 0" : "var(--radius)");
@@ -26,7 +28,7 @@ export const Selector = (props:  Props) => {
                 }}
             >
                 <div className="selector-label">
-                    <p> {props.label}</p>
+                    <p> {selected != "" ? selected : props.label}</p>
                 </div>
                 <div className="selector-icon">
                     {showOptions && 
@@ -40,7 +42,13 @@ export const Selector = (props:  Props) => {
                     <div className="selector-options">
                         {props.options.map((item, index) => {
                             return(
-                                <div key={index} className="selector-option" >
+                                <div 
+                                    key={index} 
+                                    className="selector-option" 
+                                    onClick={() => {
+                                        setSelected(item)
+                                    }}
+                                >
                                     <p>
                                         {item}
                                     </p>

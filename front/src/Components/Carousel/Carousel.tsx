@@ -5,6 +5,7 @@ import { InfoCard } from "../InfoCard/InfoCard";
 import rightArrow from "../../assets/right-arrow.svg"
 import leftArrow from "../../assets/left-arrow.svg"
 import { StudentsContainer } from "../StudentsContainer/StudentsContainer";
+import { CourseCard } from "../CourseCard/CourseCard";
 
 interface Props {
     children?: Array<React.ReactNode>;
@@ -57,7 +58,9 @@ export const Carousel = (props: Props) => {
     let estudiante1 = [
         <InfoCard schedules={schedules1} profesor={profesor1} disp={disp}  />, 
         <InfoCard schedules={schedules2}  profesor={profesor2} disp={disp}/>, 
+        <InfoCard schedules={schedules1} profesor={"Juan Dinenno"} disp={disp}/>,
         <InfoCard schedules={schedules1} profesor={"Juan Dinenno"} disp={disp}/>
+
     ]
 
     let estudiante2 = [
@@ -78,6 +81,18 @@ export const Carousel = (props: Props) => {
             color="var(--gradient-purples)"
             students={students2}
         />
+    ]
+
+    let manager1 = [
+        <CourseCard teacher="Melissa Robles"/>,
+        <CourseCard teacher="Luis Hernandez" />,
+        <CourseCard teacher="Rafael Carbajal" />,
+    ]
+
+    let manager2 = [
+        <CourseCard teacher="Jesús Navarro" />,
+        <CourseCard teacher="Andres Silva"/>,
+        <CourseCard teacher="Roberto Flores"/>
     ]
 
     let body = window.document.body;
@@ -102,14 +117,28 @@ export const Carousel = (props: Props) => {
                     </div>
                     {selected == 1 && 
                         <MainCard 
-                            children={props.role == "student" ? estudiante1 : teacher1}
-                            color={props.role == "student" ? "var(--gradient-pinks)" : "var(--gradient-purples)"}
+                            children={
+                                props.role == "student" ? estudiante1 : 
+                                props.role == "teacher" ? teacher1 : manager1 
+                            }
+                            color={
+                                props.role == "student" ? "var(--gradient-pinks)" : 
+                                props.role == "teacher" ? "var(--gradient-purples)" :
+                                "var(--gradient-pink-purple)"
+                            }
                         />
                     }
                     {selected == 2 && 
                         <MainCard 
-                            children={props.role == "student" ? estudiante2 : teacher2}
-                            color={props.role == "student" ? "var(--gradient-pinks)" : "var(--gradient-purples)"}
+                            children={
+                                props.role == "student" ? estudiante2 : 
+                                props.role == "teacher" ? teacher2 : manager2 
+                            }
+                            color={
+                                props.role == "student" ? "var(--gradient-pinks)" : 
+                                props.role == "teacher" ? "var(--gradient-purples)" :
+                                "var(--gradient-pink-purple)"
+                            }
 
                         />
                     }

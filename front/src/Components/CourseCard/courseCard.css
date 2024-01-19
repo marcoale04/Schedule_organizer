@@ -1,0 +1,68 @@
+.course-card-main{
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 90%;
+    min-width: 250px;
+    height: 250px;
+    border-radius: var(--radius);
+    padding: 10px;
+    gap: 5px;
+}
+
+.course-card-teacher{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--gradient-pink-purple);
+    /* padding: 5px; */
+}
+.course-card-teacher p, .course-card-editor p{
+    color: var(--black);
+}
+
+.course-card-editor{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--gradient-pink-purple);
+    padding: 10px;
+    gap: 10px;
+}
+.course-card-message{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    border-radius: var(--radius);
+    background: var(--white);
+}
+.course-card-schedules{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: var(--black);
+    border-radius: var(--radius);
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.course-card-schedules input{
+    width: 45%;
+    
+    border-radius: var(--radius);
+    /* padding: 3px; */
+    outline: none;
+}

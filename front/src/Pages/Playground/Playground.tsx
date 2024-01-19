@@ -10,6 +10,7 @@ import { TitleBar } from "../../Components/TitleBar/TitleBar";
 import { StudentsContainer } from "../../Components/StudentsContainer/StudentsContainer";
 import { PopUp } from "../../Components/Popup/Popup";
 import { Selector } from "../../Components/Selector/Selector";
+import { CourseCard } from "../../Components/CourseCard/CourseCard";
 
 export const Playground = () => {
 
@@ -72,7 +73,8 @@ export const Playground = () => {
                     setPopup(true)
                 }}>Popup</button> */}
 
-                <Carousel role="jj" color="var(--gradient-purples)" />
+                <Carousel role="student" color="var(--gradient-purples)" />
+                {/* <CourseCard teacher="Melissa Robles"/> */}
                 
 
                 {/* <Selector label="Perritos" options={["Chihuahua", "Labrador", "pug", "Boxer", "Pastor", "Labrador", "pug", "Boxer", "Pastor"]} /> */}

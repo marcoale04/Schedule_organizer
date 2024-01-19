@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './Pages/Home/Home.tsx';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer.tsx';
 import { StudentGenerate } from './Pages/Student/StudentGenerate.tsx';
+import { ManagerGenerator } from './Pages/Manager/ManagerGenerator.tsx';
 
 
 const root = ReactDOM.createRoot(
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
 	{
 		path: "student_schedule",
 		element: <StudentGenerate />
+	},
+	{
+		path: "manager_schedule",
+		element: <ManagerGenerator />
 	}
 ])
 
