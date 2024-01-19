@@ -40,7 +40,7 @@ export const Selector = (props:  Props) => {
                     <div className="selector-options">
                         {props.options.map((item, index) => {
                             return(
-                                <div className="selector-option" >
+                                <div key={index} className="selector-option" >
                                     <p>
                                         {item}
                                     </p>

@@ -46,7 +46,7 @@ export const Schedule = (props: Props) => {
 
     return(
         <>
-            <div className="schedule-container">
+            <div className="calendar-container">
                 <div onClick={() => console.log()} className="corner">
 
                 </div>
@@ -79,7 +79,7 @@ export const Schedule = (props: Props) => {
                     {[...Array(prueba).keys()].map((item, index) => {
                         return(
                             <div key={index} style={{display: "flex", width:"100%", height:"100%", justifyContent:"center", alignItems:"center", border:"0.5px solid gray" }}>
-                                {props.info?.includes(schedules[String(item)])   && <p >{item}</p> }
+                                {props.info?.includes(schedules[String(item)])   && <p >Cálculo IV</p> }
                                 
                             </div>
                         )

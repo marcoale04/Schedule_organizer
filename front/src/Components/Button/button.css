@@ -1,0 +1,16 @@
+.new-button{
+    display: flex;
+    padding: 7px;
+    width: 100px;
+    border-radius: 5px;
+    color: #F2F2F8;
+    background: linear-gradient(90deg, #7B2EFF, #8994FA) ;
+    outline: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-button:hover{
+    cursor: pointer;
+}

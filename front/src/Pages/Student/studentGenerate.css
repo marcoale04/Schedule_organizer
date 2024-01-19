@@ -1,0 +1,24 @@
+.student-generate-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 90% 1fr;
+    height: calc(100vh - 140px);
+    background: var(--white);
+    
+}
+
+.student-generate-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.student-generate-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}

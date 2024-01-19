@@ -72,11 +72,14 @@ export const Playground = () => {
                     setPopup(true)
                 }}>Popup</button> */}
 
-                <Selector label="Perritos" options={["Chihuahua", "Labrador", "pug", "Boxer", "Pastor", "Labrador", "pug", "Boxer", "Pastor"]} />
+                <Carousel role="jj" color="var(--gradient-purples)" />
+                
+
+                {/* <Selector label="Perritos" options={["Chihuahua", "Labrador", "pug", "Boxer", "Pastor", "Labrador", "pug", "Boxer", "Pastor"]} /> */}
 
 
 
-            
+                
         
                                     
 

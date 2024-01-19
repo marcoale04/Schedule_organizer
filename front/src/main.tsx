@@ -7,6 +7,8 @@ import { SignUp } from './Pages/SignUp/SignUp.tsx';
 import { Playground } from './Pages/Playground/Playground.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './Pages/Home/Home.tsx';
+import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer.tsx';
+import { StudentGenerate } from './Pages/Student/StudentGenerate.tsx';
 
 
 const root = ReactDOM.createRoot(
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
 	{
 		path: "manager",
 		element: <Home role="manager" />
+	},
+	{
+		path: "student_schedule",
+		element: <StudentGenerate />
 	}
 ])
 

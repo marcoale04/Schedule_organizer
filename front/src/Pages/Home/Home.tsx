@@ -35,9 +35,7 @@ export const Home = (props: Props) => {
                         <>
                             <RedirectCard 
                                 onClick={() => {
-                                    navigate("");
-                                    console.log("Le picaste al lapiz")
-
+                                    navigate("/student_schedule");
                                 }} 
                                 icon="schedule" 
                                 background="var(--gradient-pinks)" 
@@ -46,8 +44,6 @@ export const Home = (props: Props) => {
                             <RedirectCard 
                                 onClick={() => {
                                     navigate("")
-                                    console.log("Le picaste al calendario")
-
                                 }} 
                                 icon="calendar" 
                                 background="var(--gradient-pinks)" 
@@ -63,9 +59,8 @@ export const Home = (props: Props) => {
                             label="Consultar matrícula"
                             background="var(--gradient-purples)"
                             onClick={() => {
-                                navigate("")
+                                navigate("");
                                 console.log("Le picaste al diario")
-
                             }} 
                         />
                     }
@@ -78,7 +73,6 @@ export const Home = (props: Props) => {
                             onClick={() => {
                                 navigate("")
                                 console.log("Le picaste al diario")
-
                             }} 
                         />
                     }

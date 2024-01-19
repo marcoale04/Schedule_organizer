@@ -75,16 +75,7 @@ body{
     color: #E387F5;
     cursor: pointer;
 }
-button{
-    padding: 7px;
-    width: 100px;
-    border-radius: 5px;
-    color: #F2F2F8;
-    background: linear-gradient(90deg, #7B2EFF, #8994FA) ;
-    outline: none;
-    border: none;
 
-}
 
 button:hover{
     background: #7B2EFF;
