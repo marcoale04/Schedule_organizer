@@ -1,20 +1,20 @@
-.student-generate-wrapper{
+.student-query-wrapper{
     width: 100%;
     display: grid;
-    grid-template-rows: 90% 1fr;
+    grid-template-rows: 10% 80% 1fr;
     height: calc(100vh - calc(var(--footer-size) + var(--header-size)));
     background: var(--white);
     
 }
 
-.student-generate-main{
+.student-query-main{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.student-generate-buttons{
+.student-query-buttons{
     display: flex;
     width: 100%;
     justify-content: space-between;

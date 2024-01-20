@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.new-button p{
+    color: var(--white);
+}
+
 .new-button:hover{
     cursor: pointer;
 }

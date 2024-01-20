@@ -28,6 +28,8 @@ body p{
   --gradient-pinks: linear-gradient(90deg, #E387F5, #FF8ABE);
   --gradient-purples: linear-gradient(90deg, #7B2EFF, #8994FA);
   --gradient-pink-purple: linear-gradient(180deg, #7B2EFF,#E387F5 );
+  --gradient-purple-blue: linear-gradient(180deg, #7B2EFF, #8994FA);
+  --gradient-pink-blue: linear-gradient(180deg,#E387F5, #8994FA);
   --p: 1rem;
 }
 

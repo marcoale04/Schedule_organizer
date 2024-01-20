@@ -10,6 +10,7 @@ export const Button = (props: Props) => {
         <>
             <div 
                 className="new-button"
+                style={{color:"var(--white)"}}
                 onClick={() => {
                     props.onClick()
                 }}

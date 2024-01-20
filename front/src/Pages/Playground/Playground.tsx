@@ -13,6 +13,7 @@ import { Selector } from "../../Components/Selector/Selector";
 import { CourseCard } from "../../Components/CourseCard/CourseCard";
 
 import "./playground.css"
+import { TeacherContainer } from "../../Components/TeacherContainer/TeacherContainer";
 export const Playground = () => {
 
     let hours = ["7:00 - 9:00", "9:00 - 11:00",  "11:00 - 13:00", "13:00 - 15:00"]
@@ -80,6 +81,40 @@ export const Playground = () => {
 
                 <i className="fa-regular fa-circle-down"></i>
                 {/* <CourseCard teacher="Melissa Robles"/> */}
+
+                <MainCard
+                    color="var(--gradient-pinks)"
+                    children={[
+                        <TeacherContainer 
+                            teacher="Juan Escobar"
+                            subject="Calculo IV"
+                        />,
+                        <TeacherContainer 
+                            teacher="Cesar Huerta"
+                            subject="Calculo II"
+
+                        />,
+                        <TeacherContainer 
+                            teacher="Lionel Messi"
+                            subject="Ecuaciones diferenciales"
+
+                        />,
+                        <TeacherContainer 
+                            teacher="Emma Watsom"
+                            subject="Matemáticas avanzadas de la física"
+                        />,
+                        <TeacherContainer 
+                            teacher="Alejandro Mendoza"
+                            subject="Variable compleja"
+
+                        />,
+                        <TeacherContainer 
+                            teacher="Heriberto Romo"
+                            subject="Topologia"
+
+                        />,
+                    ]}
+                />
                 
 
                 {/* <Selector label="Perritos" options={["Chihuahua", "Labrador", "pug", "Boxer", "Pastor", "Labrador", "pug", "Boxer", "Pastor"]} /> */}

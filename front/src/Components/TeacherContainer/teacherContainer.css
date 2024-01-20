@@ -1,0 +1,21 @@
+.teacher-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    width: 80%;
+    min-width: 300px;
+    max-height: 80px;
+    border-radius: var(--radius);
+    padding: 15px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+.teacher-subject-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}

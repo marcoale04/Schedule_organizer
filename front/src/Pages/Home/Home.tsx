@@ -1,9 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Footer } from "../../Components/Footer/Footer"
-import { Header } from "../../Components/Header/Header"
+import { ActionButton, Header } from "../../Components/Header/Header"
 import { RedirectCard } from "../../Components/RedirectCard/RedirectCard"
 import "./home.css"
-import pen from "../../assets/pen-to-sqare.svg";
 import { useNavigate } from "react-router-dom"
 import { TitleBar } from "../../Components/TitleBar/TitleBar"
 interface Props {
@@ -20,13 +19,58 @@ export const Home = (props: Props) => {
         "manager": "directivo"
     }
 
+    let nav = useNavigate()
+    const [user, setUser] = useState("");
+    const [color, setColor] = useState("");
 
+    const [buttonAction, setButton] = useState<Array<ActionButton>>([])
     useEffect(() => {
+        switch(props.role){
+            case "student":
+                setUser("Marco Alejandro Gomez Cabrera");
+                setColor("var(--gradient-purple-blue")
+                setButton(
+                    [
+                        {label: "Registrar horario", action: () => nav("/registrar_horario")},
+                        {label: "Consultar horario", action: () => nav("/consultar_horario")},
+                        {label: "Inicio", action: () => nav("/alumno")},
+                        {label: "Cerrar sesión", action: () => nav("/login")}
+                    ]
+                )
+                break;
+            case "teacher":
+                setColor("var(--gradient-pinks)")
 
-    })
+                setButton(
+                    [
+                        {label: "Consultar matrícula", action: () => nav("/consulta_matricula")},
+                        {label: "Inicio", action: () => nav("/profesor")},
+                        {label: "Cerrar sesión", action: () => nav("/login")}
+                    ]
+                )
+                setUser("Melissa Lilian Robles Castro")
+                break;
+            case "manager":
+                setColor("var(--gradient-pink-blue)")
+                setButton(
+                    [
+                        {label: "Registrar horarios", action: () => nav("/generar_horario")},
+                        {label: "Inicio", action: () => nav("/directivo")},
+                        {label: "Cerrar sesión", action: () => nav("/login")}
+                    ]
+                )
+                setUser("Federico Diaz Acuña");
+                break;
+        }
+    }, [])
+
     return(
         <>
-            <Header />
+            <Header
+                userName={user}
+                actions={buttonAction}  
+                color={color}
+            />
             <div className="home-main-container">
                 <TitleBar title={"Inicio " + dictionary[props.role]} color="var(--gradient-purples)"/>
                 <div className="home-cards-container">
@@ -35,7 +79,7 @@ export const Home = (props: Props) => {
                         <>
                             <RedirectCard 
                                 onClick={() => {
-                                    navigate("/student_schedule");
+                                    navigate("/registrar_horario");
                                 }} 
                                 icon="schedule" 
                                 background="var(--gradient-pinks)" 
@@ -43,7 +87,7 @@ export const Home = (props: Props) => {
                             />
                             <RedirectCard 
                                 onClick={() => {
-                                    navigate("")
+                                    navigate("/consultar_horario")
                                 }} 
                                 icon="calendar" 
                                 background="var(--gradient-pinks)" 
@@ -59,8 +103,7 @@ export const Home = (props: Props) => {
                             label="Consultar matrícula"
                             background="var(--gradient-purples)"
                             onClick={() => {
-                                navigate("");
-                                console.log("Le picaste al diario")
+                                navigate("/consulta_matricula");
                             }} 
                         />
                     }
@@ -71,8 +114,8 @@ export const Home = (props: Props) => {
                             label="Registrar horarios"
                             background="var(--gradient-pink-purple)"
                             onClick={() => {
-                                navigate("")
-                                console.log("Le picaste al diario")
+                                navigate("/generar_horario")
+                                
                             }} 
                         />
                     }
