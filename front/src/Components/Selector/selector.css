@@ -40,7 +40,8 @@
     background: var(--white);
     height: 200px;
     overflow-y: scroll;
-    border: 2px solid #7B2EFF;
+    border: 3px solid #7B2EFF;
+    z-index: 1000;
 }
 
 .selector-option{

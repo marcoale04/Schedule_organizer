@@ -69,13 +69,19 @@ export const ManagerGenerator = () => {
                     <Selector label="Seleccionar grupo" options={options} />
                 </div>
                 <div className="manager-generate-main">
-                    <Carousel role="manager" color="var(--gradient-pink-purple)" />
-                    <Schedule
-                        days={days}
-                        hours={hours}
-                        background="var(--gradient-pinks)"
-                        info={info}
-                    />
+                    <div style={{display:"flex", width:"50%", justifyContent:"center", alignItems:"center"}}>
+                        <Carousel role="manager" color="var(--gradient-pink-purple)" />
+
+                    </div>
+                    <div style={{display:"flex", width:"50%", justifyContent:"center", alignItems:"center"}}>
+
+                        <Schedule
+                            days={days}
+                            hours={hours}
+                            background="var(--gradient-pinks)"
+                            info={info}
+                        />
+                    </div>
                 </div>
                <div className="manager-generate-buttons">
                     <Button content="Regresar" onClick={() => nav(-1)}/>
