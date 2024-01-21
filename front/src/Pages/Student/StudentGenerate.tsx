@@ -8,6 +8,7 @@ import { Schedule } from "../../Components/Schedule/Schedule"
 import "./studentGenerate.css"
 import { PopUp } from "../../Components/Popup/Popup"
 import { useState } from "react"
+import { TitleBar } from "../../Components/TitleBar/TitleBar"
 
 export const StudentGenerate = () => {
 
@@ -61,6 +62,8 @@ export const StudentGenerate = () => {
                 color="var(--gradient-purple-blue"
             />
             <div className="student-generate-wrapper">
+                <TitleBar title="Generar horario" color="var(--gradient-purples)"/>
+
                 <div className="student-generate-main">
                     <Carousel role="student" color="var(--gradient-pinks)" />
                     <Schedule

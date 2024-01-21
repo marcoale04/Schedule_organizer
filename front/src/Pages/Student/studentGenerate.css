@@ -1,7 +1,7 @@
 .student-generate-wrapper{
     width: 100%;
     display: grid;
-    grid-template-rows: 90% 1fr;
+    grid-template-rows: 10% 80% 1fr;
     height: calc(100vh - calc(var(--footer-size) + var(--header-size)));
     background: var(--white);
     
