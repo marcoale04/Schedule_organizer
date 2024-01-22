@@ -3,6 +3,7 @@ import "./loginForm.css"
 import { Button } from "../Button/Button";
 import { useState } from "react";
 import { PopUp } from "../Popup/Popup";
+import api, { Objects } from "../../Api";
 
 export const LoginForm = () => {
 
@@ -13,6 +14,16 @@ export const LoginForm = () => {
     const nav = useNavigate();
 
     const [showPopup, setPopup] = useState(false)
+
+    async function auth(name: string, pass: string): Promise<Objects.User>  {
+        try {
+            let auth = await api().authenticate(name, pass);
+            return Promise.resolve(auth);
+        } catch (error) {
+            setPopup(true);
+            return Promise.reject("Ha ocurrido un error");
+        }
+    }
 
     function Popupcito() {
         return(
@@ -85,16 +96,29 @@ export const LoginForm = () => {
                         <div className="bts-form-container">
                             <Button
                                 content="Continuar"  
-                                onClick={() => {
-                                    if(userName == "marco" && pass.length > 0){
-                                        nav("/alumno");
-                                    } else if(userName == "melissa" && pass.length > 0){
-                                        nav("/profesor");
-                                    } else if(userName == "federico" && pass.length > 0){
-                                        nav("/directivo")
-                                    } else {
-                                        setPopup(true);
+                                onClick={async() => {
+                                    // if(userName == "marco" && pass.length > 0){
+                                    //     nav("/alumno");
+                                    // } else if(userName == "melissa" && pass.length > 0){
+                                    //     nav("/profesor");
+                                    // } else if(userName == "federico" && pass.length > 0){
+                                    //     nav("/directivo")
+                                    // } else {
+                                    //     setPopup(true);
+                                    // }
+                                    let res = await auth(userName, pass);
+                                    if(res){
+                                        let tmp = {
+                                            userName: res.userName,
+                                            kind: res.userKind
+                                        };
+                                        sessionStorage.setItem('currentUser',JSON.stringify(tmp));
+
+                                        nav("/inicio")
+                                    } else{
+                                        setPopup(true)
                                     }
+
                                 }}      
                             />
                                 

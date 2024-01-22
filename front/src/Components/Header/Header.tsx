@@ -20,30 +20,32 @@ export const Header = (props: Props) => {
 	const [width, setWidth] = useState(0);
   	const [height, setHeight] = useState(0);
 
-	useLayoutEffect(() => {
-            setWidth((ref.current as HTMLElement).clientWidth);
-            setHeight((ref.current as HTMLElement).clientHeight);
-        
-
-		root.style.setProperty('--header-size', height + "px");
-	}, [ref.current?.clientHeight]);
 	
-	useEffect(() => {
-		function handleWindowResize() {
-		  setWidth((ref.current as HTMLElement).clientWidth);
-		  setHeight((ref.current as HTMLElement).clientHeight);
-		  
-		}
-
-		window.addEventListener('resize', handleWindowResize);
-	
-		return () => {
-		  	window.removeEventListener('resize', handleWindowResize);
-		};
-	}, []);
 
     let body = window.document.body;
     body.style.setProperty("--header-background", props.color);
+    useLayoutEffect(() => {
+        setWidth((ref.current as HTMLElement).clientWidth);
+        setHeight((ref.current as HTMLElement).clientHeight);
+    
+
+        root.style.setProperty('--header-size', height + "px");
+    }, [ref.current?.clientHeight]);
+
+    useEffect(() => {
+        function handleWindowResize() {
+        setWidth((ref.current as HTMLElement).clientWidth);
+        setHeight((ref.current as HTMLElement).clientHeight);
+        
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+    
     return(
 
         <header ref={ref}>
@@ -52,10 +54,7 @@ export const Header = (props: Props) => {
                     <p>{props.userName}</p>
                 </div>
                 <div className="bts-header-container">
-                    {/* <p>Regístrate</p>
-                    <p>Registro horario</p>
-                    <p>Consulta horario</p> */}
-
+            
                     {props.actions.map((item, index) => {
                         return(
                             <>

@@ -23,7 +23,7 @@ export const ManagerGenerator = () => {
 
     const button_action: Array<ActionButton> = [
         {label: "Registrar horarios", action: () => nav("/generar_horario")},
-        {label: "Inicio", action: () => nav("/directivo")},
+        {label: "Inicio", action: () => nav("/inicio")},
         {label: "Cerrar sesión", action: () => nav("/")}
     ]
 

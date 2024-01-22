@@ -20,7 +20,7 @@ export const Teacher = () => {
 
     const button_action: Array<ActionButton> = [
         {label: "Consultar matrícula", action: () => nav("/consulta_matricula")},
-        {label: "Inicio", action: () => nav("/profesor")},
+        {label: "Inicio", action: () => nav("/inicio")},
         {label: "Cerrar sesión", action: () => nav("/")}
     ]
 

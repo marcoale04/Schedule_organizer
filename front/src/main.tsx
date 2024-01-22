@@ -35,21 +35,21 @@ const router = createBrowserRouter([
 		path: "/playground",
 		element: <Playground />
 	},
-	{
-		path: "alumno",
-		element: <Home role='student'/>
-	},
-	{
-		path: "profesor",
-		element: <Home role='teacher' />
-	},
+	// {
+	// 	path: "alumno",
+	// 	element: <Home role='student'/>
+	// },
+	// {
+	// 	path: "profesor",
+	// 	element: <Home role='teacher' />
+	// },
 	{
 		path:"/consulta_matricula",
 		element: <Teacher />
 	},
 	{
-		path: "directivo",
-		element: <Home role="manager" />
+		path: "/inicio",
+		element: <Home />
 	},
 	{
 		path: "registrar_horario",

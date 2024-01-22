@@ -19,7 +19,7 @@ export const StudentQuery = () => {
     const button_action: Array<ActionButton> = [
         {label: "Registrar horario", action: () => nav("/registrar_horario")},
         {label: "Consultar horario", action: () => nav("/consultar_horario")},
-        {label: "Inicio", action: () => nav("/alumno")},
+        {label: "Inicio", action: () => nav("/inicio")},
         {label: "Cerrar sesión", action: () => nav("/")}
     ]
 
@@ -75,7 +75,7 @@ export const StudentQuery = () => {
                     />
                 </div>
                <div className="student-query-buttons">
-                    <Button content="Regresar" onClick={() => nav("/alumno")}/>
+                    <Button content="Regresar" onClick={() => nav(-1)}/>
                </div>
             </div>
             <Footer />

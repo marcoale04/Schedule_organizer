@@ -47,7 +47,7 @@ export const StudentGenerate = () => {
     const button_action: Array<ActionButton> = [
         {label: "Registrar horario", action: () => nav("/registrar_horario")},
         {label: "Consultar horario", action: () => nav("/consultar_horario")},
-        {label: "Inicio", action: () => nav("/alumno")},
+        {label: "Inicio", action: () => nav("/inicio")},
         {label: "Cerrar sesión", action: () => nav("/")}
     ]
 

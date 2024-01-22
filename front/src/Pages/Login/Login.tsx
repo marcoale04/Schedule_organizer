@@ -1,12 +1,11 @@
-import { useNavigate } from "react-router-dom"
 import "./login.css"
-import { TitleBar } from "../../Components/TitleBar/TitleBar";
 import { LoginForm } from "../../Components/LoginForm/LoginForm";
 import unam from "../../assets/Biblioteca unam.jpeg"
 
 export const Login = () => {
 
-    const navigate = useNavigate();
+    
+
     return(
         <>
         
