@@ -19,9 +19,7 @@ export const InfoCard = (props: Props) => {
                 >
                     {props.schedules.map((item, index) => {
                         return(
-                            
-                                <p key={index}>{item}</p>
-                            
+                            <p key={index}>{item}</p>
                         )
                     })}
                 </div>

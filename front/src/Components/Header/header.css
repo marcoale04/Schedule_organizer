@@ -17,6 +17,15 @@ header {
     align-items: center;
 }
 
+.name-container{
+    display: flex;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 2rem;
+}
+
 .bts-header-container{
     display: flex;
     width: 50%;
@@ -30,4 +39,15 @@ header {
 }
 .bts-header-container p:hover{
     background: #7B2EFF;
+}
+
+@media (max-width: 1100px){
+    .name-container p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px){
+    .name-container p{
+        font-size: 0.7rem;
+    }
 }

@@ -73,7 +73,7 @@ export const ManagerGenerator = () => {
                         <Carousel role="manager" color="var(--gradient-pink-purple)" />
 
                     </div>
-                    <div style={{display:"flex", width:"50%", justifyContent:"center", alignItems:"center"}}>
+                    <div className="manager-generate-schedule">
 
                         <Schedule
                             days={days}

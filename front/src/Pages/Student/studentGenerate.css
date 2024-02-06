@@ -22,3 +22,10 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+
+@media (max-width: 1100px){
+    .student-generate-main{
+        flex-direction: column;
+        gap: 15px
+    }
+}

@@ -1,6 +1,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./header.css"
+import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 
 export interface ActionButton {
     label: string,
@@ -19,6 +20,8 @@ export const Header = (props: Props) => {
 
 	const [width, setWidth] = useState(0);
   	const [height, setHeight] = useState(0);
+    const [responsive, setResponsive] = useState(false);
+    const [showMenu, setMenu] = useState(false);
 
 	
 
@@ -34,10 +37,12 @@ export const Header = (props: Props) => {
 
     useEffect(() => {
         function handleWindowResize() {
-        setWidth((ref.current as HTMLElement).clientWidth);
-        setHeight((ref.current as HTMLElement).clientHeight);
+            setWidth((ref.current as HTMLElement).clientWidth);
+            setHeight((ref.current as HTMLElement).clientHeight);
         
         }
+
+        console.log("EL acho que ya trae el header es::::", width);
 
         window.addEventListener('resize', handleWindowResize);
 
@@ -45,34 +50,64 @@ export const Header = (props: Props) => {
             window.removeEventListener('resize', handleWindowResize);
         };
     }, []);
+
+    function ResponsiveMenu () {
+        if(width < 1100){
+            return(
+                <BurgerMenu actions={props.actions} showMenu={showMenu} />
+            )
+        } else{
+            return(
+                <>
+                </>
+            )
+        }
+    }
     
     return(
-
-        <header ref={ref}>
-            <div className="header-content">
-                <div className="name-container">
-                    <p>{props.userName}</p>
-                </div>
-                <div className="bts-header-container">
-            
-                    {props.actions.map((item, index) => {
-                        return(
+        <>
+            <ResponsiveMenu />          
+            <header ref={ref}>
+                <div className="header-content">
+                    <div className="name-container">
+                        <p>{props.userName}</p>
+                        
+                    </div>
+                    <div className="bts-header-container">
+                        {width >= 1100 ? 
                             <>
-                                <p
-                                    onClick={() => {
-                                        item.action()
-                                    }}
-                                    key={index}
-                                >
-                                    {item.label}
-                                </p>
+                                {props.actions.map((item, index) => {
+                                    return(
+                                        <p
+                                            onClick={() => {
+                                                item.action()
+                                            }}
+                                            key={index}
+                                        >
+                                            {item.label}
+                                        </p>
+                                        
+                                    )
+                                })}
                             </>
-                        )
-                    })}
+                            : 
+                            <>
+                                {/* <BurgerMenu actions={props.actions} /> */}
+                                <div onClick={() => {
+                                    setMenu(true);
+                                }}>
+                                    <i className="fa-solid fa-bars"></i>
 
-                </div>
+                                </div>
+                            </>
+                        }
+                        
                 
-            </div>
-        </header>
+
+                    </div>
+                    
+                </div>
+            </header>
+        </>
     )
 }

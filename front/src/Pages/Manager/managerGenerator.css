@@ -33,6 +33,12 @@
     /* margin: 10px; */
 }
 
+.manager-generate-schedule {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
 .manager-generate-buttons{
     display: flex;
     width: 100%;
@@ -44,4 +50,21 @@
     margin: 10px;
 
  
+}
+
+@media (max-width: 1100px){
+    .manager-generate-main{
+        flex-direction: column;
+        gap: 15px
+    }
+    .manager-generate-schedule{
+        width: 100%;
+    }
+    .manager-generate-selector{
+        margin-left: 20px;
+    }
+    .manager-generate-buttons{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

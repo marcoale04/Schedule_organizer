@@ -11,3 +11,10 @@
     border-radius: var(--radius);
     padding: 5px;
 }
+
+@media (max-width: 500px){
+    .main-card-wrapper{
+        width: 350px;
+        height: 400px;
+    }
+}

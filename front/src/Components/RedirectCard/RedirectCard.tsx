@@ -49,7 +49,7 @@ export const RedirectCard = (props: Props) => {
                 }}
             >
                 <div className="redirect-icon">
-                    <img src={icon} alt="a" height={"120px"} width={"120px"} />
+                    <img src={icon} alt="a"  />
                 </div>
                 <div className="redirect-description">
                     <p>{props.label}</p>

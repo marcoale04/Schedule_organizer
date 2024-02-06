@@ -57,7 +57,7 @@ export const Schedule = (props: Props) => {
                 >
                    {days.map((item,index) => {
                         return(
-                            <div key={index} style={{display: "flex", width:"100%", height:"100%", justifyContent:"center", alignItems:"center", border:"0.5px solid gray" }}>
+                            <div key={index} >
                                 <p key={index}>{item}</p>
                             </div>
                         )
@@ -67,9 +67,9 @@ export const Schedule = (props: Props) => {
                 <div className="hours-container">
                     {hours.map((item, index) => {
                         return(
-                            <div key={index}style={{display: "flex", width:"100%", height:"100%", justifyContent:"center", alignItems:"center", border:"0.5px solid gray" }}>
+                            <div key={index}>
 
-                            <p key={index}>{item}</p>
+                                <p>{item}</p>
                             </div>
                         )
                     })}

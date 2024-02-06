@@ -104,7 +104,7 @@ export const Home = () => {
                                 label="Generar horario" 
                             />
                             <RedirectCard 
-                            key={2}
+                                key={2}
                                 onClick={() => {
                                     navigate("/consultar_horario")
                                 }} 

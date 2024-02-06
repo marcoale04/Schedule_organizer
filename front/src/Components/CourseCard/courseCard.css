@@ -66,3 +66,17 @@
     /* padding: 3px; */
     outline: none;
 }
+
+@media (max-width: 500px){
+    .course-card-main{
+        width: 90%;
+        min-width: 0;
+    }
+  
+    .course-card-message p{
+        font-size: 0.7rem;
+    }
+    .course-card-teacher p{
+        font-size: 0.9rem;
+    }
+}

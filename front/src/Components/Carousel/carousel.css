@@ -40,4 +40,15 @@
     border-radius: var(--radius);
 }
 
+@media (max-width: 1100px){
+    .carousel-main-container{
+        width: 450px;
+    }
+}
+@media(max-width: 500px){
+    .carousel-main-container{
+        width: 350px;
+    }
+}
+
 

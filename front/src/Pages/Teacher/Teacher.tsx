@@ -45,7 +45,7 @@ export const Teacher = () => {
                     />
                 </div>
                <div className="teacher-query-buttons">
-                    <Button content="Regresar" onClick={() => nav("/profesor")}/>
+                    <Button content="Regresar" onClick={() => nav(-1)}/>
                </div>
             </div>
             <Footer />

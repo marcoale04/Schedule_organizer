@@ -11,7 +11,7 @@ export const Login = () => {
         
             <div className="main-login-container">
                 <div className="login-container">
-                    <img src={unam} alt="unam" width={"576px"} height={"576px"} ></img>
+                    <img src={unam} alt="unam"  ></img>
                     <div style={{display:"flex", width:"100%", justifyContent:"center", alignItems:"center"}}>
 
                         <LoginForm />

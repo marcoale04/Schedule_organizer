@@ -1,6 +1,5 @@
 import React, { RefObject, useEffect, useRef } from 'react'
 import "./popup.css";
-import icon_xmark from '../../assets/icon_xmark.svg';
 
 
 interface Props {
@@ -68,15 +67,13 @@ export const PopUp: React.FC<Props> = (props: Props) => {
                         <div ref={myRef} className={`${"popup_content"}  `}>
                             <div className={`${"popup_header"}  `} >
                                 {popupTitle}
-                                <img 
-                                    src={icon_xmark} 
-                                    alt="x" 
-                                    height={"20px"} 
-                                    width={"20px"} 
+                                <i 
+                                    className="fa-solid fa-xmark"
                                     onClick={() => {
                                         props.onClose();
                                     }}
-                                />
+                                >
+                                </i>
                             </div>
 
                             <div className={"content_container"}>
