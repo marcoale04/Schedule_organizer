@@ -28,4 +28,12 @@
         flex-direction: column;
         gap: 15px
     }
+
+    .student-generate-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: calc(100vh + calc(var(--footer-size) + var(--header-size)));
+
+    }
 }

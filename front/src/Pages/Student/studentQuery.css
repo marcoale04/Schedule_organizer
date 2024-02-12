@@ -28,4 +28,11 @@
         flex-direction: column;
         gap: 15px
     }
+    .student-query-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: calc(100vh + calc(var(--footer-size) + var(--header-size)));
+
+    }
 }

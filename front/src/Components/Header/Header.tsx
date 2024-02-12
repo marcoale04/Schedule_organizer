@@ -42,8 +42,6 @@ export const Header = (props: Props) => {
         
         }
 
-        console.log("EL acho que ya trae el header es::::", width);
-
         window.addEventListener('resize', handleWindowResize);
 
         return () => {
@@ -54,7 +52,16 @@ export const Header = (props: Props) => {
     function ResponsiveMenu () {
         if(width < 1100){
             return(
-                <BurgerMenu actions={props.actions} showMenu={showMenu} />
+            
+                    <BurgerMenu 
+                        actions={props.actions} 
+                        showMenu={showMenu}
+                        onClose={() => {
+                            setMenu(false)
+                        }} 
+                    />
+
+          
             )
         } else{
             return(
@@ -93,9 +100,12 @@ export const Header = (props: Props) => {
                             : 
                             <>
                                 {/* <BurgerMenu actions={props.actions} /> */}
-                                <div onClick={() => {
-                                    setMenu(true);
-                                }}>
+                                <div 
+                                    style={{position:"absolute", top:"20%", right:"10px", fontSize:"1.4rem"}}
+                                    onClick={() => {
+                                        setMenu(true);
+                                    }}
+                                >
                                     <i className="fa-solid fa-bars"></i>
 
                                 </div>

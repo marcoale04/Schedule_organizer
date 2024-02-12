@@ -59,7 +59,7 @@ export const StudentGenerate = () => {
             <Header
                 userName="Marco Alejandro Gomez Cabrera"
                 actions={button_action}  
-                color="var(--gradient-purple-blue"
+                color="var(--gradient-purple-blue)"
             />
             <div className="student-generate-wrapper">
                 <TitleBar title="Generar horario" color="var(--gradient-purples)"/>
